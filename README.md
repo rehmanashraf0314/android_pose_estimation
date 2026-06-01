@@ -1,3 +1,31 @@
+# AI Fitness Trainer Android APP 🏋️‍♂️🤖
+
+A real-time mobile app that acts as your personal AI fitness trainer. It watches your workout form using your phone's camera and talks to you in real-time to correct your posture or count your reps.
+
+---
+
+## 📱 How It Works
+
+The app does all the heavy lifting locally on your phone, meaning you don't need an internet connection or a backend server to use it:
+
+1. **Live Camera Feed:** The app uses React Native Vision Camera to capture live frames from your phone's camera at a high frame rate.
+2. **Native Processing (Kotlin):** These frames are passed directly down to the Android native side (written in Kotlin). 
+3. **AI Form Checking:** Inside the Kotlin layer, Google's MediaPipe automatically detects your body joints and landmarks. The app then checks your angles to see if your exercise form is good or bad.
+4. **The Feedback Loop:** The native Android side passes this workout feedback and coordinates back up to the React Native front-end.
+5. **UI & Voice Cues:** The app shows your skeleton tracking points on the screen and instantly speaks to you out loud (e.g., "Squat lower" or "Keep your back straight") using Text-to-Speech, so you can focus on your workout without staring at the screen.
+
+---
+
+## 🛠️ Tech Stack
+
+* **Cross-Platform Framework:** React Native
+* **Native Android Core:** Kotlin
+* **Pose Tracking:** Google MediaPipe
+* **Voice Synthesis:** Text-to-Speech (TTS)
+
+
+
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
